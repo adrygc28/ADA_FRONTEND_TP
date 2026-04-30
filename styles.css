@@ -1,0 +1,212 @@
+/* ================= VARIABLES (para consistencia) ================= */
+:root {
+  --azul-oscuro: #020617;
+  --azul: #4a6cf7;
+  --lila: #a78bfa;
+  --blanco: #ffffff;
+  --gris: #f1f5f9;
+
+  /* Gradiente principal */
+  --gradiente: linear-gradient(135deg, #4a6cf7, #a78bfa);
+}
+
+/* ================= RESET NAVEGADOR ================= */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ================= HEADER ================= */
+.header {
+  background: var(--azul-oscuro);
+  padding: 15px 30px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: radial-gradient(circle, #1e293b, #020617);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-text p {
+  margin-bottom: 40px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+/* Botones */
+.btn {
+  background: var(--gradiente);
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+
+/* ================= FUNCIONES ================= */
+.cards {
+  background: var(--gris);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* Grid reutilizable */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Tarjetas */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* ================= BENEFICIOS ================= */
+.benefits {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* ================= FRASE ================= */
+.quote {
+  background: var(--gradiente);
+  color: white;
+  text-align: center;
+  padding: 40px;
+  font-size: 1.5rem;
+}
+
+/* ================= GALERÍA ================= */
+.gallery {
+  background: var(--gris);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+/* ================= CONTACTO ================= */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: var(--azul-oscuro);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* Grid en móvil */
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Menú en columna */
+  .nav ul {
+    flex-direction: column;
+  }
+}
+
+
+/* Imágenes responsivas */
+img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+/* HERO IMAGEN */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* Tamaño de imagen principal */
+.hero img {
+  width: 500px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+/* Efecto hover en tarjetas */
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* Sombra más pronunciada en tarjetas */
+.card {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* ================= FUNCIONES ================= */
+.card-funcion img {
+  width: 60px; 
+  margin-bottom: 10px;
+}
+
+/* ================= GALERÍA ================= */
+.card-galeria img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 12px;
+}
